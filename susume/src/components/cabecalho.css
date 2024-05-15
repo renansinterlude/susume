@@ -1,0 +1,63 @@
+/*Cabeçalho*/
+.cabecalho {
+    margin-top: 0px;
+    width: 100%;
+    height: 146px;
+    background-color: #ec4c54;
+    text-decoration: none;
+    border-bottom: 1.5px solid #000000;
+  }
+  .logo {
+    float: left;
+    width: 150px;
+    font-size: 25px;
+    color: #fff6f5;
+    margin-top: 55px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .menu {
+    width: 400px;
+    margin-top: 70px;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .menu a {
+    text-decoration: none;
+    list-style: none;
+  }
+  .menu a span {
+    font-size: 13px;
+    color: #000000;
+    display: inline-block;
+    margin-right: 12px;
+  }
+  .busca {
+    float: right;
+    width: 50%;
+    margin-top: 60px;
+  }
+  .busca input {
+    border: 1.5px solid #000000;
+    border-radius: 30px;
+    width: 500px;
+    height: 35px;
+    font-size: 13px;
+    padding-left: 20px;
+    margin-right: 20px;
+    align-items: left;
+  }
+  .busca button {
+    background-color: #ffffff;
+    border: 1.5px solid #000000;
+    color: #000000;
+    font-size: 13px;
+    border-radius: 30px;
+    padding: 8px;
+    width: 125px;
+    height: 35px;
+    margin-right: 60px;
+    align-items: left;
+  }
+  /*Fim do Cabeçalho*/
+   

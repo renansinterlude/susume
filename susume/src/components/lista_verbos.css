@@ -1,0 +1,148 @@
+.corpo {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    background-color: #FFF6F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+   
+  .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+  }
+
+   
+  .main span{
+  margin-bottom: 20px;
+  }
+   
+  .main a{
+  color: #000000;
+  }
+
+  .saibaMais{
+    margin-bottom: 50px;
+  }
+
+  .titulo {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 40px;
+  }
+
+  .texto {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .opcoes {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .opcao1 {
+    background-color: #F29494;
+    text-align: center;
+    display: inline-block;
+    height: 250px;
+    width: 200px;
+    padding-top: 90px;
+    margin: 20px;
+    border: solid 1.5px black;
+    border-radius: 10px;
+  }
+
+  .opcao2 {
+    background-color: #F2E6D8;
+    text-align: center;
+    display: inline-block;
+    height: 250px;
+    width: 200px;
+    padding-top: 100px;
+    margin: 20px;
+    border: solid 1.5px black;
+    border-radius: 10px;
+  }
+
+  .texto-verbos-opcao {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .tituloopcao {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .titulo {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 40px;
+  }
+
+  .texto {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .opcoes {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .opcao1 {
+    background-color: #F29494;
+    text-align: center;
+    display: inline-block;
+    height: 250px;
+    width: 200px;
+    padding-top: 110px;
+    margin: 20px;
+    border: solid 1.5px black;
+    border-radius: 10px;
+  }
+
+  .opcao2 {
+    background-color: #F2E6D8;
+    text-align: center;
+    display: inline-block;
+    height: 250px;
+    width: 200px;
+    padding-top: 110px;
+    margin: 20px;
+    border: solid 1.5px black;
+    border-radius: 10px;
+  }
+
+  .opcao3 {
+    background-color: #EC4C54;
+    text-align: center;
+    display: inline-block;
+    height: 250px;
+    width: 200px;
+    padding-top: 110px;
+    margin: 20px;
+    border: solid 1.5px black;
+    border-radius: 10px;
+  }
+
+  .tituloopcao {
+    font-weight: bold;
+    font-size: 20px;
+  }

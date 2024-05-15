@@ -1,0 +1,6 @@
+*.env
+src/json/
+node_modules/
+src/controllers/gramatica/
+src/models/gramatica/
+src/routes/gramatica/

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+  .container-home {
+    width: 50%;
+    justify-content: center;
+  }
+   
+  .titulo {
+    font-family: 'Roboto-flex', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .texto {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .container-opcoes-home {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .opcoes-home {
+    width: 180px;
+    height: 230px;
+    border-radius: 15px;
+    align-content: center;
+    border: 1px solid black;
+  }
+
+  .opcao-jlpt {
+    background-color: #EC4C54;
+  }
+
+  .opcao-verbo {
+    background-color: #F29494;
+  }
+
+  .texto-home-opcao {
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 900;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .saiba-mais-home {
+    font-family: 'Roboto Flex', sans-serif;
+    text-align: center;
+    
+  }
+
+  .container-lista-verbos {
+    width: 50%;
+    justify-content: center;
+  }
+
+  .container-opcoes-verbos {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .opcoes-verbos {
+    width: 180px;
+    height: 230px;
+    border-radius: 15px;
+    align-content: center;
+    border: 1px solid black;
+  }
+
+  .grupo-1 {
+    background-color: #F29494;
+  }
+
+  .grupo-2 {
+    background-color: #F2E6D8;
+  }
+
+  .grupo-3 {
+    background-color: #EC4C54;
+  }
+
+
+  /* tela de busca */
+  .containerVerbo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px;
+    background: #F2E6D8;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-bottom: 50px;
+  }
+
+  .containerVerbos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 50px;
+    background: #F2E6D8;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-bottom: 50px;
+  }
+
+  .listaOrdenada {
+    width: 100%;
+  }
+
+  .tituloVerbo {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .textoTraducao {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .textoVerbo {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+
+  .kanji {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .linha {
+    height: 1px; /* Altera a altura da linha para 2 pixels */
+    background-color: black;
+    
+  }
+
+  .tituloopcao {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .link-sem-sublinhado {
+    color: black;
+    text-decoration: none;
+}

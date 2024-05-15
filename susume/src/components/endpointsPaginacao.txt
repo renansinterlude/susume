@@ -1,0 +1,26 @@
+Vocabulário
+http://localhost:3000/vocabularioN1?page=28
+Ver como links funcionam?
+Detectar qual página o usuário está e passar pro link (???)
+
+===
+Passar endpoints pelos botões de paginação
+===
+
+
+===
+Bootstrap Pagination
+no lugar de hrefs alterar link da requisição 
+https://react-bootstrap.netlify.app/docs/components/pagination/
+===
+
+Fazer um looping while "pagina" != [] (vazio) incrementa ou decrementa
+
+===
+PopUp: Modal
+===
+
+===
+http://localhost:3000/vocabularioN1?page=129
+
+===

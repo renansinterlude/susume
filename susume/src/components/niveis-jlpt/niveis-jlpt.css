@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+
+.container-conteudo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-jlpt-50 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.kanji-vocabulario {
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.titulo {
+    font-family: 'Roboto-flex', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.texto {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.container-jlpt-tipo {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.tipo-estudo {
+    width: 180px;
+    height: 230px;
+    border-radius: 15px;
+    align-content: center;
+    border: 1px solid black;
+}
+
+.cor-kanji {
+    background-color: #EC4C54;
+}
+
+.cor-vocabulario {
+    background-color: #F29494;
+}
+
+.texto-tipo-estudo {
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 900;
+    font-size: 17px;
+    text-align: center;
+}
+
+.link-sem-sublinhado {
+    color: black;
+    text-decoration: none;
+}
+
+.container-lista-jlpt-kanji-vocabulario {
+    display: flex;
+    justify-content: center;
+}
+
+.lista-jlpt-kanji-vocabulario {
+    width: 90%;
+    height: 200px;
+    background-color: #F2E6D8;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.paginacaoPagina {
+	background-color:#f2e6d8;
+	display:inline-block;
+	cursor:pointer;
+	color: black;
+    margin: 5px;
+	font-size:15px;
+	font-weight:bold;
+	padding:10px 10px;
+	text-decoration:none;
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
+.paginacaoPagina:hover {
+	background-color:#ff7575;
+}
+.paginacaoPagina:active {
+	position:relative;
+	top:1px;
+}
+
+button.active {
+    background-color: #ec4c54; /* Cor de fundo do botão ativo */
+    color: black; /* Cor do texto do botão ativo */
+    border: 1px solid #000000; /* Borda do botão ativo */
+}
+
+.containerAccordion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.idAccordion {
+    width: 10%;
+}
+
+.displayAccordion {
+    width: 90%;
+}
+
+.linha {
+    border: none; /* Remove a borda padrão */
+    margin: 2px solid black; /* Define as margens superior e inferior */
+    margin-top: 10px; /* Define a margem superior */
+    margin-bottom: 10px; /* Define a margem inferior */
+    width: 600px;
+}
+
+.accordionLargura {
+    width: 550px;
+}
+
+.saibaMais {
+    text-align: right;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+

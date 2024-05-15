@@ -1,0 +1,59 @@
+.containerResultadosBusca {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.containerTermoBuscado {
+    width: 40%;
+    height: 20%;
+    padding: 40px;
+    background-color: #F29494;
+    border-radius: 30px;
+    border: 1px solid black;
+    margin-right: 50px;
+}
+
+.listaOrdenada {
+    width: 100%;
+}
+
+.containerListaResultados {
+    width: 40%;
+    padding: 40px;
+    background-color: #F2E6D8;
+    border-radius: 30px;
+    border: 1px solid black;
+    margin-right: 50px;
+}
+
+.tituloTermoBuscado {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.textoTermoBuscado {
+    font-size: 16px;
+    color: black;
+}
+
+.tituloItemTermoBuscado {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.textoItemTermoBuscado {
+    font-size: 16px;
+    color: black;
+
+}
+
+
+

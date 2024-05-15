@@ -1,0 +1,55 @@
+
+  /*Fim do Cabeçalho*/
+   
+  * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto Flex", sans-serif;
+  }
+   
+
+
+   
+  /*Rodapé*/
+  #rodape :link, :visited{
+    color: #000000;
+    text-decoration: none;
+  }
+  #rodape {
+    background: #bd8180;
+    color: #000000;
+    clear: both;
+    margin-bottom: -1;
+    position: relative;
+    width: 100%;
+    height: 280px;
+    font-size: 14px;
+    text-align: center;
+    border-top: 1.5px solid #000000;
+  }
+  #rodape li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 15px;
+  }
+  #rodape .r1{
+    display: inline-block;
+    margin-top: 75px;
+    margin-bottom: 20px;
+  }
+  #rodape .r2{
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  #rodape .logo-rodape {
+    color: #fff6f5;
+    font-size: 20px;
+    text-align: center;
+  }
+  #rodape .copyright {
+    font-size: 12px;
+    text-align: center;
+  }
+  /*Fim do Rodapé*/
