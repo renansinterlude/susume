@@ -6,7 +6,7 @@ import axios from 'axios'; // Assuming you installed Axios
 import 'reactjs-popup/dist/index.css';
 import { useParams } from 'react-router-dom';
 
-const DetalhesPalavra = () => {
+const DetalhesPalavraKanji = () => {
     const { vocabulario } = useParams();
     /* a partir desse id, enviar uma solicitação pra api usando esse id pra ela retornar um objeto com as informações necessárias pra usar aqui */
     const [data, setData] = useState({}); // Estado para armazenar os dados da API
@@ -15,8 +15,8 @@ const DetalhesPalavra = () => {
         // Função para buscar os dados da API
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/detalheVN1/${vocabulario}`);
-                setData(response.data[0]);
+                const response = await axios.get(`http://localhost:3000/detalheBKanji/${vocabulario}`);
+                setData(response.data);
                 console.log(response.data)
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -25,9 +25,15 @@ const DetalhesPalavra = () => {
 
         fetchData();
     }, [vocabulario]);
+    
 
-    return (
+    return ( 
+        
+    
         <div>
+	
+        <link rel="stylesheet" href="demo.css"/>
+       
             <Cabecalho />
                 <div className="container">
                     <div className="containerCaixasSignificado">
@@ -35,12 +41,12 @@ const DetalhesPalavra = () => {
                         <p className="tituloPalavraSignificado"> {/* Palavra */} {vocabulario} </p>
                         
                         <b>
-                        <p className="textoPalavraSignificado"> {data["Word-Type"]}</p>
                         {/* {vocabulary["Word-Type"]} */}
                         {/* {data?.tipo} */}
                         <p className="textoPalavraSignificado"> {data.Strokes} traços </p>
                         <p className="textoPalavraSignificado"> JLPT {data["JLPT-test"]} </p>
-                        <p className="textoPalavraSignificado"> Leitura - {data["Reading"]} [{data.Pronunciation}] </p>
+                        <p className="textoPalavraSignificado"> Leitura On - {data["Reading-ON"]} [{data["On-Reading"]}] </p>
+                        <p className="textoPalavraSignificado"> Leitura Kun - {data["Reading-KUN"]} [{data["Kun-Reading"]}] </p>
                         </b>
                         <br />
                         <p className="textoPalavraSignificado"> {data.Translation} </p>
@@ -48,6 +54,9 @@ const DetalhesPalavra = () => {
                         </div>
                        
                     </div>
+
+
+	
                 </div>
                 
             <Rodape />
@@ -55,4 +64,4 @@ const DetalhesPalavra = () => {
     )
 }
 
-export default DetalhesPalavra;
+export default DetalhesPalavraKanji;

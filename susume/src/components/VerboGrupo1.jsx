@@ -126,9 +126,9 @@ const renderPageButtons = () => {
         {vocabularies.map((vocabulary, index) => (
           <div key={vocabulary.id}>
             <div className="containerAccordion">
-              <div className="idAccordion">
+              {/* <div className="idAccordion">
                 {vocabulary.id}
-              </div>
+              </div> */}
               <div className="displayAccordion">
                 <Accordion elevation={0} className='accordionLargura'>
                   <AccordionSummary
@@ -155,7 +155,7 @@ const renderPageButtons = () => {
                       <p><strong> {vocabulary.Vocabulary} [{vocabulary.Pronunciation}] </strong> {vocabulary["Word-Type"]}</p>
                       
                       {/* testando passar parametro pra url */}
-                      <Link to={`/detalhes-palavra/${vocabulary.Vocabulary}`}>
+                      <Link to={`/g1/detalhes-palavra-verbo/${vocabulary.Vocabulary}`}>
                         <p className='saibaMais'><u>SAIBA MAIS</u></p>
                       </Link>
                         

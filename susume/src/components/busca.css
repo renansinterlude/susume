@@ -21,6 +21,12 @@
     width: 100%;
 }
 
+.linhaBusca {
+    border-top: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 .containerListaResultados {
     width: 40%;
     padding: 40px;

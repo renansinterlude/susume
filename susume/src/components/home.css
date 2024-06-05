@@ -156,3 +156,41 @@
     color: black;
     text-decoration: none;
 }
+
+/* SOBRE */
+
+.containerSobre {
+  width: 60%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #D0E1D4;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* COMO USAR */
+
+.containerComoUsar {
+  width: 60%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: #F2F6D0;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.exemploComoUsar {
+  color: #EC4C54;
+  font-weight: bold;
+}
+

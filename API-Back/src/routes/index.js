@@ -19,7 +19,9 @@ const { verboG3Routes, getDetailVG3Routes } = require("./verbos/verboG3.routes")
 const { conjugacaoG1Routes, getDetailCG1Routes } = require("./conjugacao/conjugacaoG1.routes");
 const { conjugacaoG2Routes, getDetailCG2Routes } = require("./conjugacao/conjugacaoG2.routes");
 const { conjugacaoG3Routes, getDetailCG3Routes } = require("./conjugacao/conjugacaoG3.routes");
-const { buscaGeralRoutes, getDetailBuscaGeralRoutes } = require("./buscaGeral.routes");
+const { buscaGeralRoutes} = require("./buscaGeral.routes");
+const { getDetailBuscaVocabRoutes } = require("./buscaVocab.routes");
+const { getDetailBuscaKanjiRoutes } = require("./buscaKanji.routes");
 
 module.exports = (app) => {
   vocabularioN5Routes(app);
@@ -60,5 +62,6 @@ module.exports = (app) => {
   getDetailCG1Routes(app);
   getDetailCG2Routes(app);
   getDetailCG3Routes(app);
-  getDetailBuscaGeralRoutes(app);
+  getDetailBuscaVocabRoutes(app);
+  getDetailBuscaKanjiRoutes(app);
 };

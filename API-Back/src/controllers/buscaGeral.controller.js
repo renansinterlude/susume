@@ -41,43 +41,12 @@ exports.getBuscaGeral = async (req, res) => {
 
         // Itera sobre todos os modelos e executa a consulta em cada um deles
         for (let model of models) {
-            const vocabulario = await model.find(query);
+            const palavra = await model.find(query);
             // Concatena os resultados
-            results = results.concat(vocabulario);
+            results = results.concat(palavra);
         }
 
         res.json(results);
-    } catch (error) {
-        res.status(500).send(error);
-    }
-}
-
-
-exports.getDetailBuscaGeral = async (req, res) => {
-    try {
-        const userInput = req.params.userInput;
-        const query = {
-            $or: [
-                { "Vocabulary": userInput },
-                { "Kanji": userInput },
-                //{ "Grammar": userInput },
-            ]
-        };
-
-        // Cria uma variável para armazenar o resultado
-        let result = null;
-
-        // Itera sobre todos os modelos e executa a consulta em cada um deles
-        for (let model of models) {
-            const vocabulario = await model.findOne(query);
-            // Se um resultado for encontrado, armazena-o na variável result e interrompe o loop
-            if (vocabulario) {
-                result = vocabulario;
-                break;
-            }
-        }
-
-        res.json(result);
     } catch (error) {
         res.status(500).send(error);
     }

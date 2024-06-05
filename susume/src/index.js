@@ -49,12 +49,17 @@ import N5DetalhesPalavraKanji from './components/niveis-jlpt/N5DetalhesPalavraKa
 import N5DetalhesPalavraVerbo from './components/niveis-jlpt/N5DetalhesPalavraVerbo';
 
 
-import DetalhesPalavra from './components/Detalhes_palavra';
-import DetalhesPalavraVerbo from './components/Detalhes_palavra_verbo';
+import DetalhesPalavra from './components/DetalhesPalavra';
+import DetalhesPalavraVerbo from './components/DetalhesPalavraVerbo';
+import DetalhesPalavraKanji from './components/DetalhesPalavraKanji';
+
+import G1DetalhesPalavraVerbo from './components/G1DetalhesPalavraVerbo';
+import G2DetalhesPalavraVerbo from './components/G2DetalhesPalavraVerbo';
+import G3DetalhesPalavraVerbo from './components/G3DetalhesPalavraVerbo';
 
 
 import Sobre from './components/Sobre';
-import ComoUsar from './components/Como_usar';
+import ComoUsar from './components/ComoUsar';
 
 import VocabList from './App';
 
@@ -113,6 +118,11 @@ const App = () => {
           <Route path="/detalhes-palavra/:vocabulario" element={<DetalhesPalavra />} />
           {/* <Route path="/detalhes-palavra/:idDaPalavra" element={<DetalhesPalavra />} /> */}
           <Route path="/detalhes-palavra-verbo/:vocabulario" element={<DetalhesPalavraVerbo />} />
+          <Route path="/detalhes-palavra-kanji/:vocabulario" element={<DetalhesPalavraKanji />} />
+
+          <Route path="/g1/detalhes-palavra-verbo/:vocabulario" element={<G1DetalhesPalavraVerbo />} />
+          <Route path="/g2/detalhes-palavra-verbo/:vocabulario" element={<G2DetalhesPalavraVerbo />} />
+          <Route path="/g3/detalhes-palavra-verbo/:vocabulario" element={<G3DetalhesPalavraVerbo />} />
 
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/como-usar" element={<ComoUsar />} />

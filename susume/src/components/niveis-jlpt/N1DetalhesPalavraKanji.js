@@ -39,9 +39,8 @@ const N1DetalhesPalavraKanji = () => {
                         {/* {data?.tipo} */}
                         <p className="textoPalavraSignificado"> {data.Strokes} traços </p>
                         <p className="textoPalavraSignificado"> JLPT {data["JLPT-test"]} </p>
-                        <p className="textoPalavraSignificado"> Leitura - {data.Reading} </p>
-                        <p className="textoPalavraSignificado"> Leitura On - {data["On-Reading"]} </p>
-                        <p className="textoPalavraSignificado"> Leitura Kun - {data["Kun-Reading"]} </p>
+                        <p className="textoPalavraSignificado"> Leitura On - {data["Reading-ON"]} [{data["On-Reading"]}] </p>
+                        <p className="textoPalavraSignificado"> Leitura Kun - {data["Reading-KUN"]} [{data["Kun-Reading"]}] </p>
                         </b>
                         <br />
                         <p className="textoPalavraSignificado"> {data.Translation} </p>

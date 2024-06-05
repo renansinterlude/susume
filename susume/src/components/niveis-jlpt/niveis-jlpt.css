@@ -142,6 +142,16 @@ button.active {
     width: 550px;
 }
 
+.accordionLarguraBusca {
+    width: 400px;
+}
+
+.displayAccordionBusca {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .saibaMais {
     text-align: right;
     margin-bottom: 0;

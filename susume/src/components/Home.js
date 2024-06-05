@@ -35,9 +35,6 @@ const Home = ( ) => {
 
                 <br></br>
                 <br></br>
-
-                <p className='texto'> SAIBA MAIS </p>
-
                 <br></br>
                 <br></br>
                 <br></br>

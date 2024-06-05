@@ -21,7 +21,7 @@ const VerboGrupo3 = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/verboG2?page=${currentPage}`);
+        const response = await axios.get(`http://localhost:3000/verboG3?page=${currentPage}`);
         setVocabularies(response.data);
       } catch (error) {
         console.error('Error fetching vocabularies:', error);
@@ -126,9 +126,9 @@ const renderPageButtons = () => {
         {vocabularies.map((vocabulary, index) => (
           <div key={vocabulary.id}>
             <div className="containerAccordion">
-              <div className="idAccordion">
+              {/* <div className="idAccordion">
                 {vocabulary.id}
-              </div>
+              </div> */}
               <div className="displayAccordion">
                 <Accordion elevation={0} className='accordionLargura'>
                   <AccordionSummary
@@ -154,7 +154,7 @@ const renderPageButtons = () => {
                       <strong>
                       <p><strong> {vocabulary.Vocabulary} [{vocabulary.Pronunciation}] </strong> {vocabulary["Word-Type"]}</p>
                         
-                      <Link to="/detalhes-palavra-verbo">
+                      <Link to={`/g3/detalhes-palavra-verbo/${vocabulary.Vocabulary}`}>
                         <p className='saibaMais'><u>SAIBA MAIS</u></p>
                       </Link>
                         

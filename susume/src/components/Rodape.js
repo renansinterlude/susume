@@ -9,10 +9,7 @@ const Rodape = () => {
             <div className="r1">
               <ul>
                 <li>
-                  <a href="sobre.html">SOBRE</a>
-                </li>
-                <li>
-                  <a href="como-usar.html">COMO USAR</a>
+                  <Link to="/como-usar">COMO USAR</Link>
                 </li>
                 <li>
                   <Link to="/home">HOME</Link>
@@ -25,10 +22,7 @@ const Rodape = () => {
             <div className="r2">
               <ul>
                 <li>
-                  <a href="mapa.html">MAPA DO SITE</a>
-                </li>
-                <li>
-                  <a href="contato.html">CONTATO</a>
+                  <Link to="/sobre">SOBRE</Link>
                 </li>
               </ul>
             </div>
