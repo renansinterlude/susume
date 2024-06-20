@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Cabecalho from "./Cabecalho";
 import Rodape from "./Rodape";
-import axios from 'axios'; // Assuming you installed Axios
 import { Link } from 'react-router-dom';
 
 const ComoUsar = () => {
+    useEffect(() => {
+        document.title = "Susume | Como usar";
+        // Scroll to top ao mudar de página
+        window.scrollTo(0, 0);
+      }, []);
+
     return (
         <div>
             <Cabecalho />
@@ -53,6 +58,40 @@ const ComoUsar = () => {
                         <Link to="/verbos">
                         <strong><u>Lista de Verbos</u></strong>
                         </Link>
+
+                        <br /><br /><br />
+
+                        <strong>Escrita dos Kanjis</strong>
+
+                        <br />
+                        
+                        Ao utilizar o card para exibir a lista de kanjis você pode se deparar com os botões:
+
+                        <br /><br />
+
+                        ■ [parar]
+
+                        <br /><br />
+
+                        ◄◄ [retroceder]
+
+                        <br /><br />
+
+                        ▶ [play]
+
+                        <br /><br />
+
+                        ►► [avançar]
+
+                        <br /><br />
+
+                        ↻ [restart]
+
+                        <br /><br />
+
+                        Caso queira utilizar alguma das funções pare a execução da escrita ■ [parar] e siga com alguma das opções ◄◄ [retroceder], ►► [avançar] ou ↻ [restart]. Caso queira continuar a execução a partir de um ponto utilize ▶ [play] ou ↻ [restart].
+                        
+                        <br />
                         </p>
                     </div>
                 </div>

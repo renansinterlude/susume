@@ -4,6 +4,18 @@ import { Link } from 'react-router-dom';
 
 const Cabecalho = () => {
     const [termoDeBusca, setTermoDeBusca] = useState('');
+    const [erro, setErro] = useState('');
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if (termoDeBusca.trim() === '') {
+            setErro('Por favor, digite uma palavra para pesquisar.');
+        } else {
+            setErro('');
+            // Navega para a página de busca com o termo de busca como parâmetro de rota
+            window.location.href = `/busca?palavra=${encodeURIComponent(termoDeBusca)}`;
+        }
+    };
 
     return (
         <header>
@@ -14,8 +26,7 @@ const Cabecalho = () => {
                     </div>
                 </Link>
                 <div className="busca">
-                    {/* Modifica o formulário para controlar o envio manualmente */}
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <input
                             id="pesquisa"
                             className="input"
@@ -25,11 +36,9 @@ const Cabecalho = () => {
                             onChange={(event) => setTermoDeBusca(event.target.value)}
                             placeholder="DIGITE UMA PALAVRA"
                         />
-                        {/* Navega para a página de busca com o termo de busca como parâmetro de rota */}
-                        <Link to={`/busca?palavra=${encodeURIComponent(termoDeBusca)}`}>
-                            <button type="submit">PESQUISAR</button>
-                        </Link>
+                        <button type="submit">PESQUISAR</button>
                     </form>
+                    {erro && <p className="erro">{erro}</p>}
                 </div>
                 <div className="menu">
                     <Link to="/home">
@@ -48,6 +57,6 @@ const Cabecalho = () => {
             </div>
         </header>
     );
-}
+};
 
 export default Cabecalho;

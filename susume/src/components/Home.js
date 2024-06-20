@@ -5,24 +5,17 @@ import "./home.css";
 import { Link } from "react-router-dom";
 
 const Home = ( ) => {
-  useEffect(() => {
-      const desenha = () => {
-        var dmak = new window.Dmak('電車', {
-          'element': "abc",
-          "uri": "http://kanjivg.tagaini.net/kanjivg/kanji/"
-        });
-        console.log(dmak)
-      }
-      desenha()
-    }, [])
+    useEffect(() => {
+        document.title = "Susume | Home";
+        // Scroll to top ao mudar de página
+        window.scrollTo(0, 0);
+    }, []);
     return (
 
       
         <div>
         <Cabecalho />
-        <div id="abc">
-
-        </div>
+        
         <div className="container">
             <div className="container-home">
                 <h1 className='titulo'> Comece por aqui</h1>

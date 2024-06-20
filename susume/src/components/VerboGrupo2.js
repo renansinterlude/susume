@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 const VerboGrupo2 = () => {
   const [vocabularies, setVocabularies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 19; // Número total de páginas
+  const totalPages = 18; // Número total de páginas
   const maxButtons = 10; // Número máximo de botões a serem exibidos
 
   useEffect(() => {
@@ -26,12 +26,13 @@ const VerboGrupo2 = () => {
       } catch (error) {
         console.error('Error fetching vocabularies:', error);
       }
+      document.title = `Susume | Verbos - Grupo II`;
     };
 
     fetchData();
 
     // Scroll to top ao mudar de página
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, [currentPage]);
 
   const handlePageClick = (pageNumber) => {
@@ -41,7 +42,7 @@ const VerboGrupo2 = () => {
 // Função para gerar os botões de paginação
 const renderPageButtons = () => {
   const buttons = [];
-  const maxPages = Math.ceil(19);
+  const maxPages = Math.ceil(18);
   let startPage, endPage;
 
   if (maxPages <= maxButtons) {
@@ -121,6 +122,12 @@ const renderPageButtons = () => {
       <p className="textoVerbo"> Esta lista contém 452 palavras. </p>
 
       <div className="container">
+
+        <div className="pagination">
+          {renderPageButtons()}
+        </div>
+        <br /> <br />
+
         <div className="containerVerbos">
 
         {vocabularies.map((vocabulary, index) => (

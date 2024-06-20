@@ -32,6 +32,8 @@ const Busca = () => {
                 .catch(error => {
                     console.error("Erro ao buscar dados:", error);
                 });
+                // Titulo da Página
+                document.title = `Susume | Busca para “${termoBuscado}”`;
         }
     }, [termoBuscado]);
 
@@ -41,94 +43,89 @@ const Busca = () => {
 
             <div className="container">
                 <div className="containerResultadosBusca">
-                <div className="containerTermoBuscado">
-    <p className="tituloTermoBuscado">
-        Busca para:
-        <br />
-        “{termoBuscado && termoBuscado.toUpperCase()}”
-    </p>
-    <br />
-    <p className="textoTermoBuscado">
-        Esses são os resultados de sua busca para: “{termoBuscado && termoBuscado.toUpperCase()}”
-    </p>
-    <br />
-    {resultados && resultados.some(item => item && item["Word-Type"] && item["Word-Type"].includes("Verbo")) && (
-        <p className="textoTermoBuscado">Percebemos que você talvez esteja procurando um <strong>verbo</strong>. Caso queira ver a classificação geral dos verbos <strong> <u><Link to="/verbos">clique aqui.</Link></u></strong> </p>
-    )}
-</div>
+                    <div className="containerTermoBuscado">
+                        <p className="tituloTermoBuscado">
+                            Busca para:
+                            <br />
+                            “{termoBuscado && termoBuscado.toUpperCase()}”
+                        </p>
+                        <br />
+                        <p className="textoTermoBuscado">
+                            Esses são os resultados de sua busca para: “{termoBuscado && termoBuscado.toUpperCase()}”
+                        </p>
+                        <br />
+                        {resultados && resultados.some(item => item && item["Word-Type"] && item["Word-Type"].includes("Verbo")) && (
+                            <p className="textoTermoBuscado">Percebemos que você talvez esteja procurando um <strong>verbo</strong>. Caso queira ver a classificação geral dos verbos <strong> <u><Link to="/verbos">clique aqui.</Link></u></strong> </p>
+                        )}
+                    </div>
 
                     <div className="containerListaResultados">
-                        <ol>
-                            {resultados.map((vocabulary, index) => (
-                                <div key={vocabulary.id}>
-                                    <div className="containerAccordion">
-                                        <div className="idAccordion">
-                                            {vocabulary.id}
-                                        </div>
-                                        <div className="displayAccordionBusca">
-                                            <Accordion elevation={0} className='accordionLarguraBusca'>
-                                                <AccordionSummary
-                                                    expandIcon={<ArrowDownwardIcon />}
-                                                    aria-controls={`panel${index + 1}-content`}
-                                                    id={`panel${index + 1}-header`}
-                                                    sx={{
+                        {resultados.length === 0 ? (
+                            <center>
+                                <p className="textoSemResultados">Não foram encontrados itens com os dados de pesquisa informados.</p>
+                            </center>
+                        ) : (
+                            <ol>
+                                {resultados.map((vocabulary, index) => (
+                                    <div key={vocabulary.id}>
+                                        <div className="containerAccordion">
+                                            <div className="displayAccordionBusca">
+                                                <Accordion elevation={0} className='accordionLarguraBusca'>
+                                                    <AccordionSummary
+                                                        expandIcon={<ArrowDownwardIcon />}
+                                                        aria-controls={`panel${index + 1}-content`}
+                                                        id={`panel${index + 1}-header`}
+                                                        sx={{
+                                                            backgroundColor: "#f2e6d8"
+                                                        }}
+                                                    >
+                                                        <Typography>
+                                                            <p className='kanji-vocabulario'>{vocabulary.Vocabulary || vocabulary.Kanji || 'Palavra Desconhecida'}</p>
+                                                        </Typography>
+                                                    </AccordionSummary>
+                                                    <AccordionDetails sx={{
                                                         backgroundColor: "#f2e6d8"
-                                                    }}
-                                                >
-                                                    <Typography>
-                                                    <p className='kanji-vocabulario'>{vocabulary.Vocabulary || vocabulary.Kanji || 'Palavra Desconhecida'}</p>
-
-                                                    </Typography>
-                                                </AccordionSummary>
-                                                <AccordionDetails sx={{
-                                                    backgroundColor: "#f2e6d8"
-                                                }}
-                                                >
-<Typography>
-    {vocabulary.Translation}
-    <br />
-    <br />
-    <strong>
-        {vocabulary.Vocabulary ? (
-            // Se for Vocabulary, exibir apenas Reading e Pronunciation
-            <>
-                <p><strong>Leitura - {vocabulary.Reading} [{vocabulary.Pronunciation}]</strong></p>
-                {vocabulary["Word-Type"].includes('Verbo') && <p></p>}
-                <p>{vocabulary["Word-Type"]}</p>
-            </>
-        ) : vocabulary.Kanji ? (
-            // Se for Kanji, exibir Reading-ON e Reading-KUN
-            <>
-                <p><strong>Leitura On - {vocabulary["Reading-ON"]} <br />
-                Leitura Kun - [{vocabulary["Reading-KUN"]}]</strong></p>
-                <p>{vocabulary["Word-Type"]}</p>
-            </>
-        ) : null // Se não for nem Vocabulary nem Kanji, não exibir nada
-        }
-        <Link to={
-    vocabulary && vocabulary["Word-Type"] && vocabulary["Word-Type"].includes('Verbo') ? 
-    `/detalhes-palavra-verbo/${vocabulary.Vocabulary}` :
-    vocabulary && vocabulary.Vocabulary ? 
-    `/detalhes-palavra/${vocabulary.Vocabulary}` : 
-    vocabulary && vocabulary.Kanji ? 
-    `/detalhes-palavra-kanji/${vocabulary.Kanji}` : 
-    '#'
-}>
-    <p className='saibaMais'><u>SAIBA MAIS</u></p>
-</Link>
-
-    </strong>
-</Typography>
-
-
-                                                </AccordionDetails>                 
-                                            </Accordion>                                           
-                                        </div>                                   
+                                                    }}>
+                                                        <Typography>
+                                                            {vocabulary.Translation}
+                                                            <br />
+                                                            <br />
+                                                            <strong>
+                                                                {vocabulary.Vocabulary ? (
+                                                                    <>
+                                                                        <p><strong>Leitura - {vocabulary.Reading} [{vocabulary.Pronunciation}]</strong></p>
+                                                                        {vocabulary["Word-Type"].includes('Verbo') && <p></p>}
+                                                                        <p>{vocabulary["Word-Type"]}</p>
+                                                                    </>
+                                                                ) : vocabulary.Kanji ? (
+                                                                    <>
+                                                                        <p><strong>Leitura On - {vocabulary["Reading-ON"]} <br />
+                                                                        Leitura Kun - [{vocabulary["Reading-KUN"]}]</strong></p>
+                                                                        <p>{vocabulary["Word-Type"]}</p>
+                                                                    </>
+                                                                ) : null}
+                                                                <Link to={
+                                                                    vocabulary && vocabulary["Word-Type"] && vocabulary["Word-Type"].includes('Verbo') ?
+                                                                        `/detalhes-palavra-verbo/${vocabulary.Vocabulary}` :
+                                                                        vocabulary && vocabulary.Vocabulary ?
+                                                                            `/detalhes-palavra/${vocabulary.Vocabulary}` :
+                                                                            vocabulary && vocabulary.Kanji ?
+                                                                                `/detalhes-palavra-kanji/${vocabulary.Kanji}` :
+                                                                                '#'
+                                                                }>
+                                                                    <p className='saibaMais'><u>SAIBA MAIS</u></p>
+                                                                </Link>
+                                                            </strong>
+                                                        </Typography>
+                                                    </AccordionDetails>
+                                                </Accordion>
+                                            </div>
+                                        </div>
+                                        <hr className="linhaBusca" />
                                     </div>
-                                    <hr className="linhaBusca" />
-                                </div>
-                            ))}
-                        </ol>
+                                ))}
+                            </ol>
+                        )}
                     </div>
 
                     <br />

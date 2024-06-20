@@ -18,6 +18,13 @@ const [currentPage, setCurrentPage] = useState(1);
 const totalPages = 27; // Número total de páginas
 const maxButtons = 10; // Número máximo de botões a serem exibidos
 
+// Scroll to top ao mudar de página
+window.scrollTo(0, 0);
+
+useEffect(() => {
+  document.title = "Susume | JLPT N5 - Vocabulário";
+}, []);
+
 useEffect(() => {
   const fetchData = async () => {
     try {
@@ -120,16 +127,21 @@ const renderPageButtons = () => {
       <p className="textoVerbo"> Para o nível N5 são consideradas 632 palavras como conhecimento básico. </p>
 
       <div className="container">
+
+      <div className="pagination">
+          {renderPageButtons()}
+        </div>
+        <br />
+        <br />
+
         <div className="containerVerbos">
 
-            
-          
         {vocabularies.map((vocabulary, index) => (
           <div key={vocabulary.id}>
             <div className="containerAccordion">
-              <div className="idAccordion">
+              {/* <div className="idAccordion">
                 {vocabulary.id}
-              </div>
+              </div> */}
               <div className="displayAccordion">
                 <Accordion elevation={0} className='accordionLargura'>
                   <AccordionSummary

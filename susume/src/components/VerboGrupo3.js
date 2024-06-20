@@ -12,26 +12,27 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Link } from 'react-router-dom';
 
 
-const VerboGrupo1 = () => {
+const VerboGrupo3 = () => {
   const [vocabularies, setVocabularies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 36; // Número total de páginas
+  const totalPages = 3; // Número total de páginas
   const maxButtons = 10; // Número máximo de botões a serem exibidos
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/verboG1?page=${currentPage}`);
+        const response = await axios.get(`http://localhost:3000/verboG3?page=${currentPage}`);
         setVocabularies(response.data);
       } catch (error) {
         console.error('Error fetching vocabularies:', error);
       }
+      document.title = `Susume | Verbos - Grupo III`;
     };
 
     fetchData();
 
     // Scroll to top ao mudar de página
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, [currentPage]);
 
   const handlePageClick = (pageNumber) => {
@@ -41,7 +42,7 @@ const VerboGrupo1 = () => {
 // Função para gerar os botões de paginação
 const renderPageButtons = () => {
   const buttons = [];
-  const maxPages = Math.ceil(36);
+  const maxPages = Math.ceil(3);
   let startPage, endPage;
 
   if (maxPages <= maxButtons) {
@@ -117,10 +118,16 @@ const renderPageButtons = () => {
   return (
     <div>
       <Cabecalho />
-      <h1 className="tituloVerbo">Lista de Verbos - Grupo I</h1>
-      <p className="textoVerbo"> Esta lista contém 898 palavras. </p>
+      <h1 className="tituloVerbo">Lista de Verbos - Grupo III</h1>
+      <p className="textoVerbo"> Esta lista contém 61 palavras. </p>
 
       <div className="container">
+
+        <div className="pagination">
+          {renderPageButtons()}
+        </div>
+        <br /> <br />
+        
         <div className="containerVerbos">
 
         {vocabularies.map((vocabulary, index) => (
@@ -153,9 +160,8 @@ const renderPageButtons = () => {
                       <br />
                       <strong>
                       <p><strong> {vocabulary.Vocabulary} [{vocabulary.Pronunciation}] </strong> {vocabulary["Word-Type"]}</p>
-                      
-                      {/* testando passar parametro pra url */}
-                      <Link to={`/g1/detalhes-palavra-verbo/${vocabulary.Vocabulary}`}>
+                        
+                      <Link to={`/g3/detalhes-palavra-verbo/${vocabulary.Vocabulary}`}>
                         <p className='saibaMais'><u>SAIBA MAIS</u></p>
                       </Link>
                         
@@ -185,4 +191,4 @@ const renderPageButtons = () => {
   );
 }
 
-export default VerboGrupo1;
+export default VerboGrupo3;

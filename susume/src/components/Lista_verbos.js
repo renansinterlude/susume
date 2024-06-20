@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from 'react';
 import Cabecalho from "./Cabecalho";
 import Rodape from "./Rodape";
 import "./lista_verbos.css";
 import { Link } from "react-router-dom";
 
 const ListaVerbos = () => {
+    
+    useEffect(() => {
+        document.title = "Susume | Listas de Verbos";
+        // Scroll to top ao mudar de página
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div>
             <Cabecalho />

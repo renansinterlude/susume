@@ -18,6 +18,13 @@ const [currentPage, setCurrentPage] = useState(1);
 const totalPages = 26; // Número total de páginas
 const maxButtons = 10; // Número máximo de botões a serem exibidos
 
+// Scroll to top ao mudar de página
+window.scrollTo(0, 0);
+
+useEffect(() => {
+  document.title = "Susume | JLPT N4 - Vocabulário";
+}, []);
+
 useEffect(() => {
   const fetchData = async () => {
     try {
@@ -30,8 +37,6 @@ useEffect(() => {
 
   fetchData();
 
-  // Scroll to top ao mudar de página
-  // window.scrollTo(0, 0);
 }, [currentPage]);
 
 const handlePageClick = (pageNumber) => {
@@ -120,16 +125,21 @@ const renderPageButtons = () => {
       <p className="textoVerbo"> Para o nível N4 são consideradas 632 palavras como conhecimento básico. </p>
 
       <div className="container">
-        <div className="containerVerbos">
 
-            
+        <div className="pagination">
+          {renderPageButtons()}
+        </div>
+        <br />
+        <br />
+
+        <div className="containerVerbos">
           
         {vocabularies.map((vocabulary, index) => (
           <div key={vocabulary.id}>
             <div className="containerAccordion">
-              <div className="idAccordion">
+              {/* <div className="idAccordion">
                 {vocabulary.id}
-              </div>
+              </div> */}
               <div className="displayAccordion">
                 <Accordion elevation={0} className='accordionLargura'>
                   <AccordionSummary
@@ -158,7 +168,7 @@ const renderPageButtons = () => {
                         <p>Leitura - {vocabulary.Reading}</p>
                         <br />
                         {vocabulary["Word-Type"].includes("Verbo") ? (
-                          <Link to={`/jlpt-4/detalhes-palavra-verbo/${vocabulary.Vocabulary}`}>
+                          <Link to={`/jlpt-n4/detalhes-palavra-verbo/${vocabulary.Vocabulary}`}>
                             <p className='saibaMais'><u>SAIBA MAIS</u></p>
                           </Link>
                         ) : (

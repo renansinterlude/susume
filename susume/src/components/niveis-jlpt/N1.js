@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Cabecalho from "../Cabecalho";
 import Rodape from "../Rodape";
 import "./niveis-jlpt.css";
 import { Link } from "react-router-dom";
 
 const N1 = () => {
+
+    useEffect(() => {
+        document.title = "Susume | JLPT N1";
+        // Scroll to top ao mudar de página
+        window.scrollTo(0, 0);
+    }, []);
+    
     return (
         <div>
             <Cabecalho />

@@ -15,8 +15,15 @@ import { Link } from 'react-router-dom';
 const N1Vocabulario = () => {
   const [vocabularies, setVocabularies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 129; // Número total de páginas
+  const totalPages = 127; // Número total de páginas
   const maxButtons = 10; // Número máximo de botões a serem exibidos
+
+  // Scroll to top ao mudar de página
+  window.scrollTo(0, 0);
+
+  useEffect(() => {
+    document.title = "Susume | JLPT N1 - Vocabulário";
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,8 +37,6 @@ const N1Vocabulario = () => {
 
     fetchData();
 
-    // Scroll to top ao mudar de página
-    // window.scrollTo(0, 0);
   }, [currentPage]);
 
   const handlePageClick = (pageNumber) => {
@@ -113,8 +118,6 @@ const renderPageButtons = () => {
   return buttons;
 };
 
-
-
   return (
     <div>
       <Cabecalho />
@@ -122,16 +125,21 @@ const renderPageButtons = () => {
       <p className="textoVerbo"> Para o nível N1 são consideradas 3208 palavras como conhecimento básico. </p>
 
       <div className="container">
-        <div className="containerVerbos">
 
-            
+        <div className="pagination">
+          {renderPageButtons()}
+        </div>
+        <br />
+        <br />
+
+        <div className="containerVerbos">
           
         {vocabularies.map((vocabulary, index) => (
           <div key={vocabulary.id}>
             <div className="containerAccordion">
-              <div className="idAccordion">
+              {/* <div className="idAccordion">
                 {vocabulary.id}
-              </div>
+              </div> */}
               <div className="displayAccordion">
                 <Accordion elevation={0} className='accordionLargura'>
                   <AccordionSummary

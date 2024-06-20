@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Cabecalho from "./Cabecalho";
 import Rodape from "./Rodape";
-import axios from 'axios'; // Assuming you installed Axios
+import axios from 'axios'; 
 
 const Sobre = () => {
+
+    useEffect(() => {
+        document.title = "Susume | Sobre";
+        // Scroll to top ao mudar de página
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <div>
             <Cabecalho />
@@ -32,6 +38,105 @@ const Sobre = () => {
 
                         <br />
                         <strong> <u>dicionario.susume@gmail.com </u></strong>
+
+                        <br /><br /><br />
+
+                        O desenvolvimento desse website só foi possível graças as fontes open-source respaldadas pela licença Creative Commons CC BY-SA 3.0 ou MIT License e seus devidos créditos serão dados a seguir:
+
+                        <br /><br />
+
+                        <strong>Base de Dados e Nivelamento dos Níveis do JLPT </strong>
+
+                        <br /> 
+                        
+                        <strong>Jonathan Waller - Japanese Language Proficiency Test Resources</strong>
+                        
+                        <br />
+                        
+                        Website: <a href="https://www.tanos.co.uk/jlpt/"><u>https://www.tanos.co.uk/jlpt/</u></a>
+                        
+                        <br /><br />
+
+                        <strong>API de Escrita dos Kanjis </strong>
+                        
+                        <br /> 
+                        
+                        <strong>Matthieu Bilbille - Draw Me a Kanji</strong>
+                        
+                        <br />
+                        
+                        Website: <a href="https://mbilbille.github.io/dmak/"><u>https://mbilbille.github.io/dmak/</u></a>
+                        
+                        <br />
+                        
+                        GitHub: <a href="https://github.com/mbilbille/dmak"><u>https://github.com/mbilbille/dmak</u></a>
+                        
+                        <br /><br />
+
+                        <strong>Base de Dados de Vetores Gráficos para a Escrita de Kanji</strong>
+                        
+                        <br /> 
+                        
+                        <strong>Ulrich Apel - KanjiVG</strong>
+                        
+                        <br />
+                        
+                        Website: <a href="https://kanjivg.tagaini.net/index.html"><u>https://kanjivg.tagaini.net/index.html</u></a>
+                        
+                        <br />
+                        
+                        GitHub: <a href="https://github.com/KanjiVG/kanjivg"><u>https://github.com/KanjiVG/kanjivg</u></a>
+                        
+                        <br /><br /><br />
+
+                        The development of this website was only possible thanks to open-source sources supported by the Creative Commons CC BY-SA 3.0 or MIT License and due credits will be given below:
+                        
+                        <br /><br />
+
+                        <strong>Database and JLPT Levels</strong>
+                        
+                        <br /> 
+                        
+                        <strong>Jonathan Waller - Japanese Language Proficiency Test Resources</strong>
+                        
+                        <br />
+                        
+                        Website: <a href="https://www.tanos.co.uk/jlpt/"><u>https://www.tanos.co.uk/jlpt/</u></a>
+                        
+                        <br /><br />
+
+                        <strong>Kanji Writing API</strong>
+                        
+                        <br /> 
+                        
+                        <strong>Matthieu Bilbille – Draw Me a Kanji</strong>
+                        
+                        <br />
+                        
+                        Website: <a href="https://mbilbille.github.io/dmak/"><u>https://mbilbille.github.io/dmak/</u></a>
+                        
+                        <br />
+                        
+                        GitHub: <a href="https://github.com/mbilbille/dmak"><u>https://github.com/mbilbille/dmak</u></a>
+                        
+                        <br /><br />
+
+                        <strong>Database of Graphic Vectors for Writing Kanji</strong>
+                        
+                        <br /> 
+                        
+                        <strong>Ulrich Apel - KanjiVG</strong>
+                        
+                        <br />
+                        
+                        Website: <a href="https://kanjivg.tagaini.net/index.html"><u>https://kanjivg.tagaini.net/index.html</u></a>
+                        
+                        <br />
+                        
+                        GitHub: <a href="https://github.com/KanjiVG/kanjivg"><u>https://github.com/KanjiVG/kanjivg</u></a>
+                        
+                        <br />
+
                         </p>
                     </div>
                 </div>
